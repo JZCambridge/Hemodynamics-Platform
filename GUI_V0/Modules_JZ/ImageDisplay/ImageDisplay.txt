@@ -1,0 +1,66 @@
+//////////////////////////////////////////////////////////////////////////////
+1. All paths are seperated by "/"!
+2. Input a list of strings can only be seperated by "," + tab "\t" || newline "\n" || space "\s"
+3. All list must have the same number of items
+4. !!! for path with whitespace! need to use "path_name" very important!
+
+- Naming: 
+	Case(...) + Data(XXX) + Mask(..X..) + "_" + SegmentationType(XX) + DilationType(X) + Dilation(..X..) 
+	+ Direction(X) + "nii.gz"
+	Data: CTA, Msk
+	Mask: All, 1, 2, ...
+	SegmentationType: KI(keep inside), RI(remove inside), SL(single layer)
+	DilationType: D(diameter), V(voxel), N(Not applicable)
+	Dilation: 0(No dilation), 1, 2, ...
+	Direction: X, Y, Z, 3
+- Stats naming:
+	Case(...) + Data(XXX) + Mask(..X..) + "_" + SegmentationType(XX) + DilationType(X) + Dilation(..X..) 
+	+ Direction(X) + "_" + Stats(XX) + Dimension(X) + Direction(X) + ".csv"
+	Stats: IF(Intensity filtered), It(Intensity), Sp(Shape), Tx(Texture), TR(Transformed)
+	Dimension: 2, 3
+- Direction:
+	#SimpleITK: image[x,y,z] == ITK_SNAP direction
+    #numpy: image_numpy_array[z,y,x] == python matrix 
+- Output slice starts from 1, CSV output starts from 1. But, array starts from 0!
+- Shape statics (2D) return all infromation for a single connected area in the image,
+	but only total area and perimeter for more than one connected area.
+//////////////////////////////////////////////////////////////////////////////
+
+# ##############################################################################
+# CPR display
+# ##############################################################################
+BackImage
+Title: RCA Straigtened CPR at 240 Degrees
+HU start: -200
+HU stop: 800
+Image color: gray
+
+Mask
+range start: 34, 35, 33
+range stop: 34, 35, 33
+color: red, yellow, green
+legend: LAR, MLR, HAR
+sigma: 0.8
+transparency: 0.6
+legend X: -0.05
+legend Y: 0.01
+Place: lower right
+
+Contour
+range start: 1, 1
+range stop: 3, 1000
+color: royalblue, seagreen
+legend: Lumen, Perivascular
+sigma: 3
+level: 0.5
+legend X: -0.05
+legend Y: 0.25
+Place: upper right
+
+Plot setting
+Font size: 14
+Resampling: 4
+X start: 800
+X stop: 0
+Y start: 2000
+Y stop: 215

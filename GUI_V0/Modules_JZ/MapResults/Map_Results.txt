@@ -1,0 +1,66 @@
+All paths are seperated by "\"!
+Input a list of strings can only be seperated by "," + tab "\t" || newline "\n" || space "\s"
+All list must have the same number of items
+!!! for path with whitespace! need to use "path" very important!
+
+Current use stack and keeping the newer/later cases!
+normal order: aorta > LCX > LAD > RCA
+
+Need to be careful when correcting the Aorta and the artery intersection!
+
+ndCooOSI_2dndarr_.npy,
+ndCooRRT_2dndarr_.npy,
+ndCooTAWSS_2dndarr_.npy,
+ndCooTAWSS_VectorMag_2dndarr_.npy,
+ndTimeAvePressureCoo_2dndarr_.npy,
+ndTimeIQRPressureCoo_2dndarr_.npy,
+ndTimeKurtosisPressureCoo_2dndarr_.npy,
+ndTimeMaxPressureCoo_2dndarr_.npy,
+ndTimeMedianPressureCoo_2dndarr_.npy,
+ndTimeMinPressureCoo_2dndarr_.npy,
+ndTimePTPPressureCoo_2dndarr_.npy,
+ndTimeQ1PressureCoo_2dndarr_.npy,
+ndTimeQ3PressureCoo_2dndarr_.npy,
+ndTimeSkewPressureCoo_2dndarr_.npy,
+ndTimeSTDPressureCoo_2dndarr_.npy,
+ndTimeVarPressureCoo_2dndarr_.npy,
+ndTimeIQRWSSCoo_2dndarr_.npy,
+ndTimeKurtosisWSSCoo_2dndarr_.npy,
+ndTimeMaxWSSCoo_2dndarr_.npy,
+ndTimeMedianWSSCoo_2dndarr_.npy,
+ndTimeMinWSSCoo_2dndarr_.npy,
+ndTimePTPWSSCoo_2dndarr_.npy,
+ndTimeQ1WSSCoo_2dndarr_.npy,
+ndTimeQ3WSSCoo_2dndarr_.npy,
+ndTimeSkewWSSCoo_2dndarr_.npy,
+ndTimeSTDWSSCoo_2dndarr_.npy,
+ndTimeVarWSSCoo_2dndarr_.npy,
+
+
+CTOSI.nii.gz,
+CTRRT.nii.gz,
+CTTAWSS.nii.gz,
+CTTAWSS_VectorMag.nii.gz,
+CTTimeAvePressure.nii.gz,
+CTTimeIQRPressure.nii.gz,
+CTTimeKurtosisPressure.nii.gz,
+CTTimeMaxPressure.nii.gz,
+CTTimeMedianPressure.nii.gz,
+CTTimeMinPressure.nii.gz,
+CTTimePTPPressure.nii.gz,
+CTTimeQ1Pressure.nii.gz,
+CTTimeQ3Pressure.nii.gz,
+CTTimeSkewPressure.nii.gz,
+CTTimeSTDPressure.nii.gz,
+CTTimeVarPressure.nii.gz,
+CTTimeIQRWSS.nii.gz,
+CTTimeKurtosisWSS.nii.gz,
+CTTimeMaxWSS.nii.gz,
+CTTimeMedianWSS.nii.gz,
+CTTimeMinWSS.nii.gz,
+CTTimePTPWSS.nii.gz,
+CTTimeQ1WSS.nii.gz,
+CTTimeQ3WSS.nii.gz,
+CTTimeSkewWSS.nii.gz,
+CTTimeSTDWSS.nii.gz,
+CTTimeVarWSS.nii.gz,

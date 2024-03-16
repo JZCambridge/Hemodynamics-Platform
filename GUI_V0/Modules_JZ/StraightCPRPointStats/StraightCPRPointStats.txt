@@ -1,0 +1,39 @@
+All paths are seperated by "\"!
+Input a list of strings can only be seperated by "," + tab "\t" || newline "\n" || space "\s"
+All list must have the same number of items
+
+Title cannot have whitespaces use "_" instead!
+
+Connectivity area keep: can only be - first, second or third
+
+Threshold: 300 - 600
+Threshold connectivity filter use 1 is enough
+active contour area 66 is good
+iteration 800 is reasonable for AAOCA RCA [normal case 300 is enough]
+Dilation 1 pixel is good enough
+CPU/processors: 8 cores (dependent on computer)
+
+!! make sure LCX is filled after aorta (keep new)
+
+
+##############################################################################
+Base input excel:
+OutDirs: out directory
+OutFileNames: out name references
+ReferenceCSVs: reference CSVs
+Parameters: number of parameters to calculate
+
+Reference CSVs:
+CaseReferences: case name reference output diagnosis file folder name
+"Parameter" + str(i): parameter references
+"BaseParameterFiles" + str(i): base parameter nifiti file
+"BaseMaskFiles" + str(i): corresponding base mask nifiti file
+"CompareParameterFiles" + str(i): comparing parameter nifiti file
+"CompareMaskFiles" + str(i): corresponding comparing mask nifiti 
+"Contours" + str(i): contours of the mask 1 == True, 0 == False
+"StartSlices" + str(i):
+"FinishSlices" + str(i):
+"StartRows" + str(i):
+"FinishRows" + str(i):
+"StartColumns" + str(i):
+"FinishColumns" + str(i):

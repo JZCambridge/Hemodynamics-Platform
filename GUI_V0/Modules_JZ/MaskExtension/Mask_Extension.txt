@@ -1,0 +1,22 @@
+All paths are seperated by "\"!
+Input a list of strings can only be seperated by "," + tab "\t" || newline "\n" || space "\s"
+All list must have the same number of items
+
+Title cannot have whitespaces use "_" instead!
+
+For tissue shrinkage: all tissue need to:
+	1. stack together first in "Stack Segmentation"
+	2. need to have values!!
+		Tissue:
+		VHP == 31 (Calcium > 500 HU)
+		MHP == 32 (Spotty calcium /mixed fibrous 200 – 500 HU)
+		HAP == 33 (Fibrous 30 – 200 HU)
+		LAP == 34 (Lipid -70 – 30 HU)
+		MLP == 35 (Epicardial adipose -200-70 HU)
+		VLP == 36 (Air/others <-200 HU)
+
+Current function does not support multiple region shrinking together!
+In a single slice, there is only one lumen, one wall!!!
+
+Erosion does not work when:
+ # pixels of area reduction < 50% # pixels of perimeter

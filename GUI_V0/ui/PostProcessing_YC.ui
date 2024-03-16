@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QScrollArea" name="scrollArea_PP">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidget_PP">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>763</width>
+         <height>550</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_148">
+        <item>
+         <widget class="QLabel" name="label_Paraview_PP">
+          <property name="font">
+           <font>
+            <family>Arial Black</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="autoFillBackground">
+           <bool>true</bool>
+          </property>
+          <property name="text">
+           <string>Paraview-processing</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_PP">
+          <item>
+           <widget class="QLabel" name="label_InputFile_PP">
+            <property name="text">
+             <string>Points and Cells </string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_NodeCoordinate_pp">
+            <item>
+             <widget class="QLabel" name="label_NodeCoordinate_PP">
+              <property name="text">
+               <string>Node Coordinate File</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_ChooseNodeCoordinate_PP">
+              <property name="text">
+               <string>E:/Test/666028/34percent/FFR/Npy/Fluid_Nodecoo_Dic.npy</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_ChooseNodeCoordinate_PP">
+              <property name="text">
+               <string>Choose</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_tetraElem_PP">
+            <item>
+             <widget class="QLabel" name="label_tetraElem_PP">
+              <property name="text">
+               <string>Tetra-element File:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_tetraElem_PP">
+              <property name="text">
+               <string>E:/Test/666028/34percent/FFR/Npy/Fluid_TetraElmnt_NdIfo_Dic.npy</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_tetraElem_PP">
+              <property name="text">
+               <string>Choose</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_label_Hexelem_PP">
+            <item>
+             <widget class="QLabel" name="label_Hexelem_PP">
+              <property name="text">
+               <string>Hexa-element File:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_label_Hexelem_PP">
+              <property name="text">
+               <string>E:/Test/666028/34percent/FFR/Npy/Fluid_HexElmnt_NdIfo_Dic.npy</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_label_Hexelem_PP">
+              <property name="text">
+               <string>Choose</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="Line" name="line_158">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_fluidParameters">
+            <property name="text">
+             <string>Fluid Parameters:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_time_PP">
+            <item>
+             <widget class="QLabel" name="label_time_PP">
+              <property name="text">
+               <string>Time File:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_time_PP">
+              <property name="text">
+               <string>E:/Test/666028/34percent/FFR/Npy/Fluid_Times_Dic.npy</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_time_PP">
+              <property name="text">
+               <string>Choose</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_Lst_Parameters_PP">
+            <item>
+             <widget class="QLabel" name="label_Lst_Parameters_PP">
+              <property name="text">
+               <string>Lst_Parameters:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_Lst_Parameters_PP">
+              <property name="text">
+               <string>E:/Test/666028/34percent/FFR/Npy/Fluid_lst_ParamsDic.npy</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_Lst_Parameters_PP">
+              <property name="text">
+               <string>Choose</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_postresults_PP">
+            <item>
+             <widget class="QLabel" name="label_postresults_PP">
+              <property name="text">
+               <string>fluid_postResults</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_postresults_PP">
+              <property name="text">
+               <string>E:/Test/666028/34percent/FFR/postNpy/fluid_PostResults_Dict_dict.npy</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_postresults_PP">
+              <property name="text">
+               <string>Choose</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_WSSParameter_PP">
+            <item>
+             <widget class="QLabel" name="label_WSSParameter_PP">
+              <property name="text">
+               <string>TimeAveragePressure:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_WSSParameter_PP">
+              <property name="text">
+               <string>E:/Test/666028/34percent/FFR/postNpy/fluid_TimeAvePressureDict_dict.npy</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_WSSParameter_PP">
+              <property name="text">
+               <string>Choose</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_WSS_PP">
+            <item>
+             <widget class="QLabel" name="label_WSS_PP">
+              <property name="text">
+               <string>WSS:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_WSS_PP">
+              <property name="text">
+               <string>E:/Test/666028/34percent/FFR/postNpy/fluid_PostResults_WssDict_dict.npy</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_WSS_PP">
+              <property name="text">
+               <string>Choose</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_TimeAverPressure_PP">
+            <item>
+             <widget class="QLabel" name="label_TimeAverPressure_PP">
+              <property name="text">
+               <string>TimeAveragePressuredelete:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_TimeAverPressure_PP">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_TimeAverPressure_PP">
+              <property name="text">
+               <string>Choose</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_FFRIQRAverageValue_PP">
+            <item>
+             <widget class="QLabel" name="label_FFRIQRAverageValue_PP">
+              <property name="text">
+               <string>FFRIQRAverageValue:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_FFRIQRAverageValue_PP">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_FFRIQRAverageValue_PP">
+              <property name="text">
+               <string>Choose</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="Line" name="line_PP">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_WSS_PP_2">
+            <item>
+             <widget class="QLabel" name="label_ExportPath_PP">
+              <property name="text">
+               <string>ExportPath:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_ExportPath_PP">
+              <property name="text">
+               <string>E:/Test/666028/34percent/FFR/vtudata1/</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_ExportPath_PP">
+              <property name="text">
+               <string>Save</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="ResutlsExprot_PP">
+          <property name="text">
+           <string>Calculate and Export</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_200">
+          <item>
+           <widget class="QLabel" name="label_787">
+            <property name="text">
+             <string>Batch Render</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_490" stretch="1,10,1">
+            <item>
+             <widget class="QLabel" name="label_788">
+              <property name="text">
+               <string>TablePath</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_BatchTable_PP">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_BatchTable_PP">
+              <property name="text">
+               <string>Choose</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_BatchRun_PP">
+            <property name="text">
+             <string>BatchRender</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_27">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

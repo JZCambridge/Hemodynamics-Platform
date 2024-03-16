@@ -1,0 +1,112 @@
+All paths are seperated by "\"!
+Input a list of strings can only be seperated by "," + tab "\t" || newline "\n" || space "\s"
+All list must have the same number of items
+!!! for path with whitespace! need to use "path" very important!
+
+
+"E:/OneDrive - University of Cambridge/Uni/PhD1/CPP/WorkVer_01Apr21/CPR_04Jan21/CPRProject/x64/Release/CPRProject.exe"
+F:/Work_Data/CenterlineXsec/AAOCA/23152_69_29Mar21/LumenPreProc/OriData/Branches
+F:/Work_Data/CenterlineXsec/AAOCA/23152_69_29Mar21/LumenPreProc/Xsection
+
+CTA.nii.gz,
+LADNVl0604211655.nii.gz,
+LADVal0604211655.nii.gz,
+CTA.nii.gz,
+LCXNVl0604211656.nii.gz,
+LCXVal0604211656.nii.gz,
+CTA.nii.gz,
+RCANVl0604211648.nii.gz,
+RCAVal0604211648.nii.gz
+
+LAD.csv,
+LAD.csv,
+LAD.csv,
+LCX.csv,
+LCX.csv,
+LCX.csv,
+RCA.csv,
+RCA.csv,
+RCA.csv
+
+CTALADNN.nii.gz,
+NVlLADNN.nii.gz,
+ValLADNN.nii.gz,
+CTALCXNN.nii.gz,
+NVlLCXNN.nii.gz,
+ValLCXNN.nii.gz,
+CTARCANN.nii.gz,
+NVlRCANN.nii.gz,
+ValRCANN.nii.gz
+
+LAD3D.csv,
+LAD3D.csv,
+LAD3D.csv,
+LCX3D.csv,
+LCX3D.csv,
+LCX3D.csv,
+RCA3D.csv,
+RCA3D.csv,
+RCA3D.csv
+
+1, 1, 1, 1, 1, 1, 1, 1, 1
+
+"CPR Angle" in degree
+"Interpolation" 0 linear & 1 nearest neigbour
+"Resample Depth" is constant with input image size units 
+
+# ##############################################################################
+# CFD results straightened
+# ##############################################################################
+"E:/OneDrive - University of Cambridge/Uni/PhD1/CPP/WorkVer_01Apr21/CPR_04Jan21/CPRProject/x64/Release/CPRProject.exe"
+
+F:/Work_Data/PhD1/AAOCA/23152_69_29Mar21/CFDPost/MapCT
+
+CTOSI.nii.gz,
+CTRRT.nii.gz,
+CTTAWSS.nii.gz,
+CTOSI.nii.gz,
+CTRRT.nii.gz,
+CTTAWSS.nii.gz,
+CTOSI.nii.gz,
+CTRRT.nii.gz,
+CTTAWSS.nii.gz,
+
+LAD.csv,
+LAD.csv,
+LAD.csv,
+LCX.csv,
+LCX.csv,
+LCX.csv,
+RCA.csv,
+RCA.csv,
+RCA.csv
+
+0.1
+
+0
+
+F:/Work_Data/PhD1/AAOCA/23152_69_29Mar21/CFDPost/RawCTSTR
+
+OSILADNN.nii.gz,
+RRTLADNN.nii.gz,
+TAWLADNN.nii.gz,
+OSILCXNN.nii.gz,
+RRTLCXNN.nii.gz,
+TAWLCXNN.nii.gz,
+OSIRCANN.nii.gz,
+RRTRCANN.nii.gz,
+TAWRCANN.nii.gz
+
+LAD3D.csv,
+LAD3D.csv,
+LAD3D.csv,
+LCX3D.csv,
+LCX3D.csv,
+LCX3D.csv,
+RCA3D.csv,
+RCA3D.csv,
+RCA3D.csv
+
+1, 1, 1, 1, 1, 1, 1, 1, 1
+
+9

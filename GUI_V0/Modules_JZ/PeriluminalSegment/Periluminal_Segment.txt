@@ -1,0 +1,56 @@
+All paths are seperated by "\"!
+Input a list of strings can only be seperated by "," + tab "\t" || newline "\n" || space "\s"
+All list must have the same number of items
+
+Title cannot have whitespaces use "_" instead!
+
+Connectivity area keep: can only be - first, second or third
+
+Threshold: 300 - 600
+Threshold connectivity filter use 1 is enough
+active contour area 66 is good
+iteration 800 is reasonable for AAOCA RCA [normal case 300 is enough]
+Dilation 1 pixel is good enough
+CPU/processors: 8 cores (dependent on computer)
+
+!! make sure LCX is filled after aorta (keep new)
+
+
+##############################################################################
+# Compare multiprocessor results
+1399 slices LAD + LM segmentation: activie contour 300 iterations or dilation with when area < 66 pixels
+8 cores multiprocesser:
+Complete active contour and dilation running: 
+ ------Running time: 2041.2782623767853 s------
+
+signle processors(Not using multiprocessing function)
+Complete active contour and dilation running: 
+ ------Running time: 1037.6708416938782 s------
+
+##############################################################################
+# Compare multiprocessor results
+1659 slices RCA segmentation: activie contour 800 iterations or dilation with when area < 66 pixels
+4 cores multiprocesser:
+Complete active contour and dilation running: 
+ ------Running time: 3587.318423271179 s------
+
+signle processors(Not using multiprocessing function)
+Complete active contour and dilation running: 
+ ------Running time: 6361.641507863998 s------
+
+
+# ##############################################################################
+# 106720 stenosis + calcification
+# ##############################################################################
+LAD:
+
+HU: -200 -- 2000
+Gradient: 1800 + No Gaussian
+LoG: -50 -- 50 
+	Gaussian: disk 3 + SD 2
+
+Wall: 2
+	close: 2, 2
+	open: 1, 2
+
+Area thres: 3 

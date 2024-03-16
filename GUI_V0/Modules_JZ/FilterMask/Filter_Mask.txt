@@ -1,0 +1,14 @@
+All paths are seperated by "\"!
+Input a list of strings can only be seperated by "," + tab "\t" || newline "\n" || space "\s"
+
+RCA:
+1, 2, 3, 18
+
+LM + LAD:
+5, 6, 7, 8
+
+LCX:
+11, 13
+
+Aorta:
+4

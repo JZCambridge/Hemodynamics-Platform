@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QWidget" name="widget_IPY" native="true">
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2_IPY">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_IPY">
+           <item>
+            <widget class="QLabel" name="label_IPY">
+             <property name="text">
+              <string>NiftiFilePath:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPlainTextEdit" name="plainTextEdit_IPY">
+             <property name="plainText">
+              <string>E:/B_PlaqueQuantitativeAnalysis/Carotid/luyu/cal4_1.2.840.31314.14143234.20151214081352.1631851_left.nii.gz,
+E:/B_PlaqueQuantitativeAnalysis/Carotid/luyu/cal4_1.3.46.670589.11.34312.5.0.10496.2015080518015800518_left.nii.gz,
+E:/B_PlaqueQuantitativeAnalysis/Carotid/luyu/cal4_1.3.46.670589.11.34312.5.0.10496.2015080519255095584_left.nii.gz,</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="chooseFileButton_IPY">
+             <property name="text">
+              <string>Choose</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3_IPY">
+           <item>
+            <widget class="QLabel" name="label_2_IPY">
+             <property name="text">
+              <string>Axis:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPlainTextEdit" name="FlipAxisplainTextEdit_IPY">
+             <property name="plainText">
+              <string>1</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2_IPY">
+           <item>
+            <widget class="QLabel" name="label_3_IPY">
+             <property name="text">
+              <string>OutputFilePath:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPlainTextEdit" name="OutputplainTextEdit_IPY">
+             <property name="plainText">
+              <string>E:/B_PlaqueQuantitativeAnalysis/Carotid/luyu/flip/</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="outputButton_IPY">
+             <property name="text">
+              <string>Choose</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QPushButton" name="Run_IPY">
+           <property name="text">
+            <string>Run</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

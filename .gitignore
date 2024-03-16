@@ -1,0 +1,10 @@
+# ignore folders
+## ignore all Base
+**/Base
+## ignore all __pycache__
+**/__pycache__
+
+# ignore .pyc
+**/*.pyc
+
+

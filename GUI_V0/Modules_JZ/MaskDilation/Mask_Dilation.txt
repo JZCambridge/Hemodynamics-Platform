@@ -1,0 +1,22 @@
+//////////////////////////////////////////////////////////////////////////////
+All paths are seperated by "\"!
+Input a list of strings can only be seperated by "," + tab "\t" || newline "\n" || space "\s"
+All list must have the same number of items
+
+Title cannot have whitespaces use "_" instead!
+//////////////////////////////////////////////////////////////////////////////
+
+# ##############################################################################
+# Straight FAI
+# ##############################################################################
+F:/Work_Data/PhD1/AAOCAWhole/23152_69_29Mar21/LumenPreProc/XsectionFixMan/RCAFxValMan.nii.gz
+
+Check Diameter
+Check Yes
+0
+
+Check X
+1
+
+F:/Work_Data/PhD1/AAOCAWhole/23152_69_29Mar21/Perilum/FAITissue/FAIRegion
+RCAVal

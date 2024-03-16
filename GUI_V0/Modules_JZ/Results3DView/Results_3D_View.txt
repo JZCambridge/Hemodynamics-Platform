@@ -1,0 +1,79 @@
+All paths are seperated by "\"!
+Input a list of strings can only be seperated by "," + tab "\t" || newline "\n" || space "\s"
+All list must have the same number of items
+!!! for path with whitespace! need to use "path" very important!
+
+Current use stack and keeping the newer/later cases!
+normal order: aorta > LCX > LAD > RCA
+
+Need to be careful when correcting the Aorta and the artery intersection!
+
+//tenoke-jsa045/SharedDocuments/I_Carortid/Carortid_segmentation/TestSmooth/STL/wallAllOPF.stl
+//tenoke-jsa045/SharedDocuments/I_Carortid/Carortid_segmentation/P78R-Label.nii.gz
+//tenoke-jsa045/SharedDocuments/I_Carortid/Carortid_segmentation/P78R-Label.nii.gz
+//tenoke-jsa045/SharedDocuments/I_Carortid/Carortid_segmentation/P78R-Label.nii.gz
+
+0,1,3,4
+
+0,1,3,4
+
+0.5, 1, 1, 1
+
+green, red, white, yellow
+
+False,False,False,False
+
+False,True,True,True
+
+20,5,5,5
+
+0.01,0.01,0.01,0.01,
+
+False,False,False,False
+
+
+
+//tenoke-jsa045/SharedDocuments/I_Carortid/Carortid_segmentation/P78R-Label.nii.gz
+//tenoke-jsa045/SharedDocuments/I_Carortid/Carortid_segmentation/P78R-Label.nii.gz
+//tenoke-jsa045/SharedDocuments/I_Carortid/Carortid_segmentation/P78R-Label.nii.gz
+//tenoke-jsa045/SharedDocuments/I_Carortid/Carortid_segmentation/P78R-Label.nii.gz
+
+equal,equal,equal,equal,
+
+2,1,3,4
+
+2,1,3,4
+
+3,3,3,3
+
+green,red,gray,yellow
+
+
+
+//tenoke-jsa061/Coronary/a7paperCT847447/hm/test01Aug21/allAor4remesh.stl
+
+//tenoke-jsa061/Coronary/a7paperCT847447/PostProcessing/All/MapCT/CTTAWSS.nii.gz
+
+0.5
+
+False
+
+False
+
+Display Range
+
+camera:
+Position: (263.9477813984959, 88.34644711388823, 407.1534370583354)
+Focal Position: (87.10788921833625, 90.87559783795555, 80.26352743643668)
+View up: (-0.879528890512151, -0.010909736681671348, 0.47572040990481135)
+View Angle: 30.0
+
+Position: (198.00155001109715, 102.64507966192902, 266.72521628509253)
+Focal Position: (113.28774361173527, 110.6037468633318, 82.35319493219822)
+View up: (-0.9083912588080503, 0.012694237584920685, 0.41792843556434817)
+View Angle: 30.0
+
+Position: (27.717787217663368, 32.76818167634689, -81.05166019353591)
+Focal Position: (131.54416723723696, 92.24126981919991, 83.0088354622653)
+View up: (-0.7818402153439512, -0.23175698575437825, 0.5788044378069062)
+View Angle: 30.0

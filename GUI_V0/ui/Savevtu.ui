@@ -1,0 +1,1199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1169</width>
+    <height>943</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QScrollArea" name="scrollArea_19">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_22">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1149</width>
+         <height>878</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_165">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_166">
+          <item>
+           <widget class="QLabel" name="label_600">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial Black</family>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="autoFillBackground">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>Save vtu</string>
+            </property>
+            <property name="textFormat">
+             <enum>Qt::RichText</enum>
+            </property>
+            <property name="scaledContents">
+             <bool>false</bool>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="Line" name="line_152">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_360">
+            <item>
+             <widget class="QLabel" name="label_601">
+              <property name="text">
+               <string>NasPath</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_nasPath_SVZ">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="plainText">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_choosenas_SVZ">
+              <property name="text">
+               <string>Choose</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="Line" name="line_153">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_373">
+            <item>
+             <widget class="QLabel" name="label_602">
+              <property name="text">
+               <string>ParamsDicPath</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_ParamsPath_SVZ">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="plainText">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_chooseParama_SVZ">
+              <property name="text">
+               <string>Choose</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_376" stretch="0,1,2,1,2,1,2">
+            <item>
+             <widget class="QCheckBox" name="checkBox_Fluidpvd_SVZ">
+              <property name="text">
+               <string>Fluid</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBox_velocity_SVZ">
+              <property name="text">
+               <string>Velocity</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_velocity_SVZ">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="plainText">
+               <string>Velocity</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBox_nodalpressure_SVZ">
+              <property name="text">
+               <string>Nodal_Pressure</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_nodalpressure_SVZ">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="plainText">
+               <string>Nodal_Pressure</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBox_maxshearstress_SVZ">
+              <property name="text">
+               <string>Max_Shear_Stress</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_maxshearstress_SVZ">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="plainText">
+               <string>Max_Shear_Stress</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_389" stretch="0,1,2,1,2,1,2,1,2">
+            <item>
+             <widget class="QCheckBox" name="checkBox_Solidpvd_SVZ">
+              <property name="text">
+               <string>Solid</string>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBox_SigmaP1_SVZ">
+              <property name="text">
+               <string>Sigma_P1</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_SigmaP1_SVZ">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="plainText">
+               <string>Sigma_P1</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBox_Effectivestress_SVZ">
+              <property name="text">
+               <string>Efffective_Stress</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_Effectivestress_SVZ">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="plainText">
+               <string>Efffective_Stress</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBox_Solidmaxshearstress_SVZ">
+              <property name="text">
+               <string>Max_Shear_Stress</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_Solidmaxshearstress_SVZ">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="plainText">
+               <string>Max_Shear_Stress</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBox_SigmaNorm2_SVZ">
+              <property name="text">
+               <string>Sigma_Norm2</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_SigmaNorm2_SVZ">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="plainText">
+               <string>Sigma_Norm2</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_377">
+            <item>
+             <widget class="QLabel" name="label_603">
+              <property name="text">
+               <string>savePVDPath</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_pvdPath_SVZ">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="plainText">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_choosepvdPath_SVZ">
+              <property name="text">
+               <string>Choose</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_378" stretch="1,10,0">
+            <item>
+             <widget class="QLabel" name="label_604">
+              <property name="text">
+               <string>PVDName</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_pvdName_VPZ">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="plainText">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBox_PVDbinary_SVZ">
+              <property name="text">
+               <string>PVDbinary</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_savepvd_SVZ">
+            <property name="text">
+             <string>SavePVD</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="Line" name="line_155">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_379">
+            <item>
+             <widget class="QLabel" name="label_605">
+              <property name="text">
+               <string>TAPNpyPath</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_TAPnpyPath_SVZ">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="plainText">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_chooseTAPnpy_SVZ">
+              <property name="text">
+               <string>Choose</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_380">
+            <item>
+             <widget class="QLabel" name="label_606">
+              <property name="text">
+               <string>FFRValuePath</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_FFRValuePath_SVZ">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="plainText">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_chooseFFRValue_SVZ">
+              <property name="text">
+               <string>Choose</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_381" stretch="1,10">
+            <item>
+             <widget class="QLabel" name="label_607">
+              <property name="text">
+               <string>FFRPointArrayName</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_FFRarrayName_SVZ">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="plainText">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_382" stretch="1,10,1">
+            <item>
+             <widget class="QLabel" name="label_616">
+              <property name="text">
+               <string>saveFFRVTUPath</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_FFRSavePath_SVZ">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_chooseFFRsave_SVZ">
+              <property name="text">
+               <string>Choose</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_383" stretch="1,10,0">
+            <item>
+             <widget class="QLabel" name="label_617">
+              <property name="text">
+               <string>FFRvtuName</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_FFRname_SVZ">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="plainText">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBox_FFRbinary_SVZ">
+              <property name="text">
+               <string>FFRbinary</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_saveFFRvtu_SVZ">
+            <property name="text">
+             <string>SaveFFRvtu</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="Line" name="line_156">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_384">
+            <item>
+             <widget class="QLabel" name="label_618">
+              <property name="text">
+               <string>ndInterestDictPath</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_ndInterestPath_SVZ">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="plainText">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_choosendInterest_SVZ">
+              <property name="text">
+               <string>Choose</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_385" stretch="1,10,1">
+            <item>
+             <widget class="QLabel" name="label_619">
+              <property name="text">
+               <string>ParamsNpyPath</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_ParamsNpyPath_SVZ">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="plainText">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_chooseParamsNpy_SVZ">
+              <property name="text">
+               <string>Choose</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_386" stretch="1,10">
+            <item>
+             <widget class="QLabel" name="label_626">
+              <property name="text">
+               <string>NpyName</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_npyName_SVZ">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="plainText">
+               <string>ndCooOSI_2dndarr.npy,
+ndCooRRT_2dndarr.npy,
+ndCooTAWSS_2dndarr.npy,
+ndCooTAWSS_VectorMag_2dndarr.npy,
+ndTimeAvePressureCoo_2dndarr.npy,
+ndTimeDecile1PressureCoo_2dndarr.npy,
+ndTimeDecile1WSSCoo_2dndarr.npy,
+ndTimeDecile2PressureCoo_2dndarr.npy,
+ndTimeDecile2WSSCoo_2dndarr.npy,
+ndTimeDecile3PressureCoo_2dndarr.npy,
+ndTimeDecile3WSSCoo_2dndarr.npy,
+ndTimeDecile4PressureCoo_2dndarr.npy,
+ndTimeDecile4WSSCoo_2dndarr.npy,
+ndTimeDecile6PressureCoo_2dndarr.npy,
+ndTimeDecile6WSSCoo_2dndarr.npy,
+ndTimeDecile7PressureCoo_2dndarr.npy,
+ndTimeDecile7WSSCoo_2dndarr.npy,
+ndTimeDecile8PressureCoo_2dndarr.npy,
+ndTimeDecile8WSSCoo_2dndarr.npy,
+ndTimeDecile9PressureCoo_2dndarr.npy,
+ndTimeDecile9WSSCoo_2dndarr.npy,
+ndTimeEnergyPressureCoo_2dndarr.npy,
+ndTimeEnergyWSSCoo_2dndarr.npy,
+ndTimeEntropyPressureCoo_2dndarr.npy,
+ndTimeEntropyWSSCoo_2dndarr.npy,
+ndTimeGMeanPressureCoo_2dndarr.npy,
+ndTimeGMeanWSSCoo_2dndarr.npy,
+ndTimeHMeanPressureCoo_2dndarr.npy,
+ndTimeHMeanWSSCoo_2dndarr.npy,
+ndTimeIQRPressureCoo_2dndarr.npy,
+ndTimeIQRWSSCoo_2dndarr.npy,
+ndTimeKurtosisPressureCoo_2dndarr.npy,
+ndTimeKurtosisWSSCoo_2dndarr.npy,
+ndTimeMaxPressureCoo_2dndarr.npy,
+ndTimeMaxWSSCoo_2dndarr.npy,
+ndTimeMedianPressureCoo_2dndarr.npy,
+ndTimeMedianWSSCoo_2dndarr.npy,
+ndTimeMinPressureCoo_2dndarr.npy,
+ndTimeMinWSSCoo_2dndarr.npy,
+ndTimeModePressureCoo_2dndarr.npy,
+ndTimeModeWSSCoo_2dndarr.npy,
+ndTimePTPPressureCoo_2dndarr.npy,
+ndTimePTPWSSCoo_2dndarr.npy,
+ndTimeQ1PressureCoo_2dndarr.npy,
+ndTimeQ1WSSCoo_2dndarr.npy,
+ndTimeQ3PressureCoo_2dndarr.npy,
+ndTimeQ3WSSCoo_2dndarr.npy,
+ndTimeRMSPressureCoo_2dndarr.npy,
+ndTimeRMSWSSCoo_2dndarr.npy,
+ndTimeSEPressureCoo_2dndarr.npy,
+ndTimeSEWSSCoo_2dndarr.npy,
+ndTimeSkewPressureCoo_2dndarr.npy,
+ndTimeSkewWSSCoo_2dndarr.npy,
+ndTimeSTDPressureCoo_2dndarr.npy,
+ndTimeSTDWSSCoo_2dndarr.npy,
+ndTimeTriMeanPressureCoo_2dndarr.npy,
+ndTimeTriMeanWSSCoo_2dndarr.npy,
+ndTimeVarPressureCoo_2dndarr.npy,
+ndTimeVarWSSCoo_2dndarr.npy,</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_387" stretch="1,10">
+            <item>
+             <widget class="QLabel" name="label_627">
+              <property name="text">
+               <string>UseClac</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_useclac_SVZ">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="plainText">
+               <string>1,
+1,
+1,
+1,
+0,
+0,
+1,
+0,
+1,
+0,
+1,
+0,
+1,
+0,
+1,
+0,
+1,
+0,
+1,
+0,
+1,
+0,
+1,
+0,
+1,
+0,
+1,
+0,
+1,
+0,
+1,
+0,
+1,
+0,
+1,
+0,
+1,
+0,
+1,
+0,
+1,
+0,
+1,
+0,
+1,
+0,
+1,
+0,
+1,
+0,
+1,
+0,
+1,
+0,
+1,
+0,
+1,
+0,
+1,</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_388" stretch="1,10">
+            <item>
+             <widget class="QLabel" name="label_628">
+              <property name="text">
+               <string>PointArrayName</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_pointarrayname_SVZ">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="plainText">
+               <string>OSI,
+RRT,
+TAWSS,
+TAWSS_VectorMag,
+TimeAvePressure,
+TimeDecile1Pressure,
+TimeDecile1WSS,
+TimeDecile2Pressure,
+TimeDecile2WSS,
+TimeDecile3Pressure,
+TimeDecile3WSS,
+TimeDecile4Pressure,
+TimeDecile4WSS,
+TimeDecile6Pressure,
+TimeDecile6WSS,
+TimeDecile7Pressure,
+TimeDecile7WSS,
+TimeDecile8Pressure,
+TimeDecile8WSS,
+TimeDecile9Pressure,
+TimeDecile9WSS,
+TimeEnergyPressure,
+TimeEnergyWSS,
+TimeEntropyPressure,
+TimeEntropyWSS,
+TimeGMeanPressure,
+TimeGMeanWSS,
+TimeHMeanPressure,
+TimeHMeanWSS,
+TimeIQRPressure,
+TimeIQRWSS,
+TimeKurtosisPressure,
+TimeKurtosisWSS,
+TimeMaxPressure,
+TimeMaxWSS,
+TimeMedianPressure,
+TimeMedianWSS,
+TimeMinPressure,
+TimeMinWSS,
+TimeModePressure,
+TimeModeWSS,
+TimePTPPressure,
+TimePTPWSS,
+TimeQ1Pressure,
+TimeQ1WSS,
+TimeQ3Pressure,
+TimeQ3WSS,
+TimeRMSPressure,
+TimeRMSWSS,
+TimeSEPressure,
+TimeSEWSS,
+TimeSkewPressure,
+TimeSkewWSS,
+TimeSTDPressure,
+TimeSTDWSS,
+TimeTriMeanPressure,
+TimeTriMeanWSS,
+TimeVarPressure,
+TimeVarWSS,
+</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="Line" name="line_157">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_400" stretch="1,10,1">
+            <item>
+             <widget class="QLabel" name="label_629">
+              <property name="text">
+               <string>saveVTUPath</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_Savevtu_SVZ">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_Savevtu_SVZ">
+              <property name="text">
+               <string>Choose</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_401" stretch="1,10,0">
+            <item>
+             <widget class="QLabel" name="label_643">
+              <property name="text">
+               <string>vtuName</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_vtuname_SVZ">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="plainText">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBox_vtubinary_SVZ">
+              <property name="text">
+               <string>vtubinary</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_402" stretch="0,0,12">
+            <item>
+             <widget class="QCheckBox" name="checkBox_addFFR_SVZ">
+              <property name="text">
+               <string>AddFFR</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBox_savesingle_SVZ">
+              <property name="text">
+               <string>savesingle</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_savevtu_SVZ">
+              <property name="text">
+               <string>Savevtu</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_203">
+            <item>
+             <widget class="QLabel" name="label_793">
+              <property name="text">
+               <string>Batch Render</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_493" stretch="1,10,1">
+              <item>
+               <widget class="QLabel" name="label_794">
+                <property name="text">
+                 <string>TablePath</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPlainTextEdit" name="plainTextEdit_BatchTable_SVZ">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>25</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_BatchTable_SVZ">
+                <property name="text">
+                 <string>Choose</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_BatchRun_SVZ">
+              <property name="text">
+               <string>BatchRender</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1169</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,63 @@
+All paths are seperated by "\"!
+Input a list of strings can only be seperated by "," + tab "\t" || newline "\n" || space "\s"
+All list must have the same number of items
+!!! for path with whitespace! need to use "path" very important!
+
+Current use stack and keeping the newer/later cases!
+normal order: aorta > LCX > LAD > RCA
+
+Need to be careful when correcting the Aorta and the artery intersection!
+
+##############################
+F:/Work_Data/PhD1/AAOCAWhole/23152_69_29Mar21/Perilum/FinalXsectionFEA/CTA.nii.gz
+
+F:/Work_Data/PhD1/AAOCAWhole/23152_69_29Mar21/Perilum/OriVolumeFEA
+
+AorPlmSK_FO.nii.gz,
+LCXPlmSEOV_FO.nii.gz,
+LADPlmSEOV_FO.nii.gz,
+RCAPlmSEOV_FO.nii.gz,
+LADSEOV_FO.nii.gz,
+LCXSEOV_FO.nii.gz,
+RCASEOV_FO.nii.gz,
+AorSK_FO.nii.gz,
+
+0, 0, 0, 0, 0, 0, 0, 0
+
+30, 30, 30, 30, 5, 11, 1, 40
+
+F:/Work_Data/PhD1/AAOCAWhole/23152_69_29Mar21/Perilum/OriVolumeFEA
+
+OriVolumePlm
+
+# ##############################################################################
+# All stacking
+# ##############################################################################
+F:/Work_Data/PhD1/AAOCAWhole/23152_69_29Mar21/Perilum/FAITissue/FAIRegion/CTA.nii.gz
+
+F:/Work_Data/PhD1/AAOCAWhole/23152_69_29Mar21/Perilum/FAITissue/OriVolumeFAIT
+
+OriVolumePlmDVal.nii.gz,
+PeriVHP_SV.nii.gz,
+PeriMHP_SV.nii.gz,
+PeriHAP_SV.nii.gz,
+PeriLAP_SV.nii.gz,
+PeriMLP_SV.nii.gz,
+PeriVLP_SV.nii.gz,
+OriVolumeCAVal.nii.gz,
+
+0, 0, 0, 0, 0, 0, 0, 0
+
+Check No
+
+F:/Work_Data/PhD1/AAOCAWhole/23152_69_29Mar21/Perilum/FAITissue/OriVolumeFAIT
+
+OriVolumeFAI
+
+# ##############################################################################
+# FAI stacking
+# ##############################################################################
+
+PeriLAP_SV.nii.gz,
+PeriMLP_SV.nii.gz,
+OriVolumeCAVal.nii.gz,

@@ -1,0 +1,123 @@
+//////////////////////////////////////////////////////////////////////////////
+1. All paths are seperated by "/"!
+2. Input a list of strings can only be seperated by "," + tab "\t" || newline "\n" || space "\s"
+3. All list must have the same number of items
+4. !!! for path with whitespace! need to use "path_name" very important!
+
+- Naming: 
+	Case(...) + Data(XXX) + Mask(..X..) + "_" + SegmentationType(XX) + DilationType(X) + Dilation(..X..) 
+	+ Direction(X) + "nii.gz"
+	Data: CTA, Msk
+	Mask: All, 1, 2, ...
+	SegmentationType: KI(keep inside), RI(remove inside), SL(single layer)
+	DilationType: D(diameter), V(voxel), N(Not applicable)
+	Dilation: 0(No dilation), 1, 2, ...
+	Direction: X, Y, Z, 3
+- Stats naming:
+	Case(...) + Data(XXX) + Mask(..X..) + "_" + SegmentationType(XX) + DilationType(X) + Dilation(..X..) 
+	+ Direction(X) + "_" + Stats(XX) + Dimension(X) + Direction(X) + ".csv"
+	Stats: IF(Intensity filtered), It(Intensity), Sp(Shape), Tx(Texture), TR(Transformed)
+	Dimension: 2, 3
+- Direction:
+	#SimpleITK: image[x,y,z] == ITK_SNAP direction
+    #numpy: image_numpy_array[z,y,x] == python matrix 
+- Output slice starts from 1, CSV output starts from 1. But, array starts from 0!
+- Shape statics (2D) return all infromation for a single connected area in the image,
+	but only total area and perimeter for more than one connected area.
+//////////////////////////////////////////////////////////////////////////////
+
+# ##############################################################################
+# All Dilation
+# ##############################################################################
+BO_LI_0017283700/BOLI.nii.gz,
+CHENCHUANFEN_0018291553/CHENCHUANFEN.nii.gz,
+LINENGHUA_0019331620/LINENGHUA.nii.gz,
+LUO_SHI_RONG_0018278833/LUOSHIRONG.nii.gz,
+
+SUNLITI_0009180806/SUNLITI.nii.gz,
+WANG_LI_0008139707/WANGLI.nii.gz,
+XIONGHEPING_0019149307/XIONGHEPING.nii.gz,
+YANJIANHUA_0019945621/YANJIANHUA.nii.gz,
+
+ZHANGQIANG_0015850588/ZHANGQIANG.nii.gz,
+ZHANGXICHANG_0020242607/ZHANGXICHANG.nii.gz,
+
+CAICAICAI_0032701055/CAICAICAI.nii.gz,
+CHENCHUANFEN_0018291553_2/CHENCHUANFEN.nii.gz,
+CHENWENGUO_0032660054/CHENWENGUO.nii.gz,
+HUANGKAIHUI_0032653302/HUANGKAIHUI.nii,
+
+LIJIAN_0003370394/LIJIAN.nii,
+MA_JIAO_0032352279/MAJIAO.nii,
+WANGYOUHUA_0019058081/WANGYOUHUA.nii,
+XU_GUANG_RONG_0009283223/XUGUANGRONG.nii,
+
+YANGYU_0032712508/YANGYU.nii,
+ZHANGJUNYUAN_0032755120/ZHANGJUNYUAN.nii,
+
+
+
+BO_LI_0017283700/BOLI.nrrd,
+CHENCHUANFEN_0018291553/CHENCHUANFEN.nrrd,
+LINENGHUA_0019331620/LINENGHUA.nrrd,
+LUO_SHI_RONG_0018278833/LUOSHIRONG.nrrd,
+
+SUNLITI_0009180806/SUNLITI.nrrd,
+WANG_LI_0008139707/WANGLI.nrrd,
+XIONGHEPING_0019149307/XIONGHEPING.nrrd,
+YANJIANHUA_0019945621/YANJIANHUA.nrrd,
+
+ZHANGQIANG_0015850588/ZHANGQIANG.nrrd,
+ZHANGXICHANG_0020242607/ZHANGXICHANG.nrrd,
+
+CAICAICAI_0032701055/CAICAICAI.nrrd,
+CHENCHUANFEN_0018291553_2/CHENCHUANFEN.nrrd,
+CHENWENGUO_0032660054/CHENWENGUO.nrrd,
+HUANGKAIHUI_0032653302/HUANGKAIHUI.nrrd,
+
+LIJIAN_0003370394/LIJIAN.nrrd,
+MA_JIAO_0032352279/MAJIAO.nrrd,
+WANGYOUHUA_0019058081/WANGYOUHUA.nrrd,
+XU_GUANG_RONG_0009283223/XUGUANGRONG.nrrd,
+
+YANGYU_0032712508/YANGYU.nrrd,
+ZHANGJUNYUAN_0032755120/ZHANGJUNYUAN.nrrd,
+
+
+
+BO_LI_0017283700,
+CHENCHUANFEN_0018291553,
+LINENGHUA_0019331620,
+LUO_SHI_RONG_0018278833,
+
+SUNLITI_0009180806,
+WANG_LI_0008139707,
+XIONGHEPING_0019149307,
+YANJIANHUA_0019945621,
+
+ZHANGQIANG_0015850588,
+ZHANGXICHANG_0020242607,
+
+CAICAICAI_0032701055,
+CHENCHUANFEN_0018291553_2,
+CHENWENGUO_0032660054,
+HUANGKAIHUI_0032653302,
+
+LIJIAN_0003370394,
+MA_JIAO_0032352279,
+WANGYOUHUA_0019058081,
+XU_GUANG_RONG_0009283223,
+
+YANGYU_0032712508,
+ZHANGJUNYUAN_0032755120,
+
+# ##############################################################################
+# FAI
+# ##############################################################################
+CTARCANN.nii.gz, CTALADNN.nii.gz, CTALCXNN.nii.gz, 
+
+RCAFxValMan.nii.gz, LADFxValMan.nii.gz, LCXFxValMan.nii.gz, 
+
+All, 1, 2, 3, 5, 6, 7, 8, 11, 13
+
+RCA, LAD, LCX

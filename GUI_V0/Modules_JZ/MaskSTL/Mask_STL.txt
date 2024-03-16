@@ -1,0 +1,6 @@
+All paths are seperated by "\"!
+Title cannot have whitespaces use "_" instead!
+
+Manual correction normally deal with the branches and aorta merging place
+
+Need to convert the data type from the save data in ITK_SNAP
