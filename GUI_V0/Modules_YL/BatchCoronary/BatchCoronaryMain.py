@@ -901,7 +901,7 @@ class BatchCoronary:
                     tempCaseTable.append(tempCaseColumn2)
 
                     # insert columns into xsection fix table
-                    XsecCTAPath = os.path.join(self.XsectionPathList[loopIndex], branch['cross_section_image_NN'])
+                    XsecCTAPath = os.path.join(self.XsectionPathList[loopIndex], branch['cross_section_image_LI'])
                     XsecMaskPath = os.path.join(self.XsectionPathList[loopIndex], branch['cross_section_mask_NN'])
                     tmpXsecFixColumn = [XsecCTAPath, XsecMaskPath, self.LCProcessPath, 'Yes',
                                         self.XsectionFixPathList[loopIndex],
@@ -1422,10 +1422,8 @@ class BatchCoronary:
             self.ui.LumenCorrectionPath_Txt_BPP.toPlainText(),
             self.TableDir
         )
-        os.system(cmd1)
+        print(cmd1)
 
-        # LumenCorrect = LumenCorrectMain.LumCorrect()
-        # LumenCorrect.BatchCorrect(CSVPath=self.XsectionFixTablePath)
         self.model.lumenCorrect.BatchCorrect(CSVPath=self.XsectionFixTablePath)
 
     # create Ori-Volume Correction Object and batch process
