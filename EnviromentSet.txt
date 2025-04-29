@@ -1,0 +1,58 @@
+﻿Win + R ����cmd ����������,�������룺
+activate
+conda create -n Vtk_Side37 python=3.7
+�򿪹����ļ����У���ʾȱʲô�⣬��װʲô��
+
+pip install psutil
+
+pip install pyside2
+
+pip install numpy
+
+pip install SimpleITK==2.0.2
+
+pip install matplotlib==3.4
+
+pip install opencv-python==4.5.4.60
+
+pip install scipy
+
+pip install scikit-image
+
+pip install vtk
+
+pip install scikit-learn
+
+pip install pandas
+
+pip install more_itertools
+
+pip install meshio
+
+pip install pyyaml
+
+pip install pyradiomics
+
+pip install pyvista
+
+pip install pyvistaqt
+
+pip install pyinstaller
+
+pip install openpyxl
+
+pip install networkx
+
+pip install
+
+pip install
+
+#### QT5 and Side2 conflicts
+copy from:
+Lib\site-packages\PySide2\plugins\platforms
+to:
+Library\plugins\platforms
+
+#### Folder creation problem
+conda create --prefix D:\Anaconda\envs\VTK_Side37 python=3.7
+conda activate D:\Anaconda\envs\VTK_Side37

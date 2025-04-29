@@ -1,0 +1,7 @@
+3D Connectivity Filter,Image Segmentation Filter,Morphological Process,Morphological Process,3D Connectivity Filter
+first,boundary,3D,3D,first
+2,200,pixel,pixel,2
+,600,Closing,Opening,
+,X,3,1,
+,0,0,0,
+,9999,9999,9999,
