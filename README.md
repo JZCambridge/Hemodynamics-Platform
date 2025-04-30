@@ -21,6 +21,28 @@ activate
 conda env create -f environment.yml
 ```
 
+linux + docker
+docker build -t hymoplatform .
+
+On Linux hosts, first run:
+xhost +local:docker
+
+docker run -it --rm --gpus all -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY -v $HOME/.Xauthority:/root/.Xauthority --device=/dev/dri:/dev/dri --ipc=host -v $(pwd):/app hymohlatform
+
+docker run -it --rm --gpus 1 --shm-size 16G -v /tmp/.X11-unix:/tmp/.X11-unix -v ~/ukb:/ukb -v ~/cardiac:/cardiac -v ~/temp:/temp -v ~/jzheng12:/jzheng12 -e DISPLAY=$DISPLAY -v $HOME/.Xauthority:/root/.Xauthority --device=/dev/dri:/dev/dri --ipc=host -v $(pwd):/app hymohlatform
+
+/ukb/template_wenjia/vtks/LVmyo_ED.vtk
+
+/ukb/jz_ukbb_18k/collection_1/1000213/lvsa_SR_ED.nii.gz
+0 350
+0 350
+40 40
+
+/ukb/jz_ukbb_18k/collection_1/1000213/lvsa_ED.nii.gz
+
+/ukb/jz_ukbb_18k/collection_1/1000213/vtks/F_LVmyo_ED.vtk
+
+
 
 ### Installing
 

@@ -6,7 +6,18 @@ Jin ZHENG JZ410 (29Mar21)
 """
 import sys
 import os
-os.chdir(os.path.dirname(__file__))
+
+# Fix for directory path issue in Docker
+current_file = os.path.abspath(__file__)
+current_dir = os.path.dirname(current_file)
+if current_dir:  # Only change directory if path exists
+    os.chdir(current_dir)
+else:
+    # Fallback if __file__ doesn't work properly (common in containers)
+    print("Warning: Could not determine script directory. Using current working directory.")
+    current_dir = os.getcwd()
+
+sys.path.insert(0, os.path.join(current_dir, '..', 'QSSFil/QSS_IMG'))
 sys.path.insert(0, '../QSSFil/QSS_IMG')
 # from qt_material import apply_stylesheet
 ##############################################################################

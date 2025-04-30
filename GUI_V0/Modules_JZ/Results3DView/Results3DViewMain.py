@@ -1011,6 +1011,12 @@ class Results3DView:
             textShadow
         )
 
+        # update message
+        msg = 'imageFiles: \n{}'.format(imageFiles) + \
+              '\nvolumeCut: \n{}'.format(volumeCut)
+              
+        self.UpdateMsgLog(msg)
+        
         # update
         self.UpdateMsgLog(self.render.message)
 

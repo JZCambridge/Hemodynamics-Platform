@@ -1,7 +1,5 @@
-﻿Win + R ����cmd ����������,�������룺
-activate
+﻿activate
 conda create -n Vtk_Side37 python=3.7
-�򿪹����ļ����У���ʾȱʲô�⣬��װʲô��
 
 pip install psutil
 

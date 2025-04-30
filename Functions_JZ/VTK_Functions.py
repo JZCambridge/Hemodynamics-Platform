@@ -105,7 +105,8 @@ def CreateNiftiActor(
         tissueT,
         smooth=False,
         iteration=16,
-        passBand=0.001
+        passBand=0.001,
+        color='red'
 ):
     # Check input is file or numpy data
     if not isinstance(fileName, str):
@@ -159,41 +160,64 @@ def CreateNiftiActor(
 
     actor = vtk.vtkActor()
     actor.SetMapper(mapper)
+    
+    # Set color
+    actor.GetProperty().SetColor(vtk.vtkNamedColors().GetColor3d(color))
 
     return actor, polydata
 
-
 """
 ##############################################################################
-#Func: VTK Create actor with STL file input
+#Func: Create actor from any supported VTK mesh format
 ##############################################################################
 """
-import vtk
-import numpy
-from vtk.util import numpy_support  # numpy_to_vtk and vtk_to_numpy
-import sys
-
-
 def CreateSTLActor(
         fileName,
         smooth=False,
         iteration=16,
-        passBand=0.001
+        passBand=0.001,
+        color='red'
 ):
     # Check input is file or numpy data
     if not isinstance(fileName, str):
         raise TypeError("Input file is not string!!")
-
-    # stl to polydata
-    readerSTL = vtk.vtkSTLReader()
-    readerSTL.SetFileName(fileName)
-    # 'update' the reader i.e. read the .stl file
-    readerSTL.Update()
-
+        
+    # Get file extension
+    extension = os.path.splitext(fileName)[1].lower()
+    
+    # Choose appropriate reader based on extension
+    if extension == '.vtk':
+        reader = vtk.vtkPolyDataReader()
+    elif extension == '.stl':
+        reader = vtk.vtkSTLReader()
+    elif extension == '.ply':
+        reader = vtk.vtkPLYReader()
+    elif extension == '.obj':
+        reader = vtk.vtkOBJReader()
+    elif extension == '.vtp':
+        reader = vtk.vtkXMLPolyDataReader()
+    elif extension == '.vtu':
+        reader = vtk.vtkXMLUnstructuredGridReader()
+    else:
+        raise ValueError(f"Unsupported file format: {extension}")
+        
+    reader.SetFileName(fileName)
+    reader.Update()
+    
+    # Extract polydata if needed (for formats that don't directly produce polydata)
+    if extension == '.vtu':
+        # Convert unstructured grid to polydata
+        geometryFilter = vtk.vtkGeometryFilter()
+        geometryFilter.SetInputConnection(reader.GetOutputPort())
+        geometryFilter.Update()
+        inputForPipeline = geometryFilter.GetOutputPort()
+    else:
+        inputForPipeline = reader.GetOutputPort()
+    
+    # Apply smoothing if requested
     if smooth:
-        # window sinc fucntion
         smoother = vtk.vtkWindowedSincPolyDataFilter()
-        smoother.SetInputConnection(readerSTL.GetOutputPort())
+        smoother.SetInputConnection(inputForPipeline)
         smoother.SetNumberOfIterations(iteration)
         smoother.BoundarySmoothingOff()
         smoother.FeatureEdgeSmoothingOff()
@@ -202,22 +226,33 @@ def CreateSTLActor(
         smoother.NonManifoldSmoothingOn()
         smoother.NormalizeCoordinatesOn()
         smoother.Update()
-        # stripper
+        
         stripper = vtk.vtkStripper()
         stripper.SetInputConnection(smoother.GetOutputPort())
         stripper.Update()
         polydata = stripper.GetOutput()
-        # mapper
+        
         mapper = vtk.vtkPolyDataMapper()
-        mapper.SetInputConnection(readerSTL.GetOutputPort())
+        mapper.SetInputConnection(inputForPipeline)
     else:
-        polydata = readerSTL.GetOutput()
+        # Get the polydata directly 
+        if extension == '.vtu':
+            polydata = geometryFilter.GetOutput()
+        else:
+            polydata = reader.GetOutput()
+            
         mapper = vtk.vtkPolyDataMapper()
-        mapper.SetInputConnection(readerSTL.GetOutputPort())
-
+        mapper.SetInputConnection(inputForPipeline)
+        # 2. disable scalar colouring so actor colours take over
+        mapper.ScalarVisibilityOff() 
+    
+    # Create the actor
     actor = vtk.vtkActor()
     actor.SetMapper(mapper)
-
+    
+    # Set color
+    actor.GetProperty().SetColor(vtk.vtkNamedColors().GetColor3d(color))
+    
     return actor, polydata
 
 
@@ -973,8 +1008,21 @@ def points2actor(xyz, apoint_size, color):
 ##############################################################################
 """
 
-def polyline_actor(xyz, width, color):
-    # initialisation
+def polyline_actor(xyz, width, color, use_x_color=True):
+    """
+    Creates a VTK actor representing a polyline with optional x-coordinate coloring.
+    
+    Args:
+        xyz (list): List of 3D points [[x1,y1,z1], [x2,y2,z2], ...]
+        width (int): Line width
+        color (str): Color name from VTK named colors (used when not using x-coloring)
+        use_x_color (bool): When True, colors the line based on x-coordinate values
+    
+    Returns:
+        actor: VTK actor for rendering
+        polyData: VTK polydata object
+    """
+    # Initialization
     colors = vtk.vtkNamedColors()
     points = vtk.vtkPoints()
     polyLine = vtk.vtkPolyLine()
@@ -983,35 +1031,65 @@ def polyline_actor(xyz, width, color):
     mapper = vtk.vtkPolyDataMapper()
     actor = vtk.vtkActor()
 
-    # points
+    # Create scalar array for x-coordinate values if using x-coloring
+    if use_x_color:
+        x_scalars = vtk.vtkFloatArray()
+        x_scalars.SetName("XCoordinates")
+        
+    # Add points and collect x values if needed
     for point in xyz:
-        # adding points
+        # Adding points to the polyline
         points.InsertNextPoint(point)
+        
+        # Store the x-coordinate as a scalar value for coloring
+        if use_x_color:
+            x_scalars.InsertNextValue(point[0])  # point[0] is the x-coordinate
 
-    # polyline
+    # Set up polyline topology
     polyLine.GetPointIds().SetNumberOfIds(len(xyz))
     for i in range(len(xyz)):
         polyLine.GetPointIds().SetId(i, i)
 
-    # Create a cell array to store the lines in and add the lines to it
+    # Create a cell array to store the lines and add the polyline
     cells.InsertNextCell(polyLine)
 
     # Add the points to the dataset
     polyData.SetPoints(points)
 
+    # If using x-coordinate coloring, add the scalars to the polydata
+    if use_x_color:
+        polyData.GetPointData().SetScalars(x_scalars)
+
     # Add the lines to the dataset
     polyData.SetLines(cells)
 
-    # Setup actor and mapper
+    # Setup the mapper with our polydata
     mapper.SetInputData(polyData)
+    
+    # Configure color mapping based on the selected mode
+    if use_x_color:
+        # Find the range of x-coordinates for the color scale
+        x_values = [point[0] for point in xyz]
+        mapper.SetScalarRange(min(x_values), max(x_values))
+        
+        # Create a color lookup table to map from x values to colors
+        lut = vtk.vtkLookupTable()
+        lut.SetHueRange(0.667, 0.0)  # Blue to red color spectrum
+        lut.Build()
+        
+        # Connect the lookup table to the mapper
+        mapper.SetLookupTable(lut)
+        mapper.SetScalarModeToUsePointData()
+        mapper.ScalarVisibilityOn()
+    else:
+        # Use the specified solid color when not using x-coloring
+        actor.GetProperty().SetColor(colors.GetColor3d(color))
 
-    # actor
+    # Set up the actor with our mapper
     actor.SetMapper(mapper)
-    actor.GetProperty().SetColor(colors.GetColor3d(color))
     actor.GetProperty().SetLineWidth(int(width))
 
     return actor, polyData
-
 
 """
 ##############################################################################
@@ -1779,14 +1857,16 @@ class VTK3DView(object):
                     tissueT=tops[item],
                     smooth=smoothChoice,
                     iteration=iteration,
-                    passBand=passBand
+                    passBand=passBand,
+                    color=color,
                 )
-            elif extension == ".stl":
+            elif extension in [".vtk", ".vtp", ".fib", ".ply", ".stl", ".xml", ".obj"]:
                 actor, polydata = CreateSTLActor(
                     fileName=file,
                     smooth=smoothChoice,
                     iteration=iteration,
-                    passBand=passBand
+                    passBand=passBand,
+                    color=color,
                 )
             else:
                 # message
@@ -1803,6 +1883,7 @@ class VTK3DView(object):
                 )
 
             # set property
+            print(f'find color: {color}, vtk color: {self.colors.GetColor3d(color)}')
             actorProperty = vtk.vtkProperty()
             actorProperty.SetOpacity(float(transparency))
             actorProperty.SetColor(self.colors.GetColor3d(color))
@@ -2003,28 +2084,39 @@ class VTK3DView(object):
                 )
 
             else:
-                # load DF
+                # load DFs
                 factorDF = Pd_Funs.OpenDF(
-                                inPath=factorFile,
-                                header=0
-                            )
+                            inPath=factorFile,
+                            header=0
+                        )
 
                 coordDF = Pd_Funs.OpenDF(
                     inPath=file,
                     header=0
                 )
 
-                # factor
-                factorLst = factorDF.loc[item, :].values.flatten().tolist()
-                spacingXYZ = numpy.asarray(factorLst)
-                inSpace = numpy.diag(spacingXYZ)
+                # Get coordinates and convert to numpy array
+                Coors_XYZ = coordDF.values
 
-                # Coors_XYZ
-                Coors_XYZ = coordDF.values.tolist()
-                print(Coors_XYZ)
+                # Get factors with the same number of rows as coordinates
+                # If factors has fewer rows, repeat the last row to match
+                factorArray = factorDF.values
+                if len(factorArray) < len(Coors_XYZ):
+                    # Pad with repeats of the last row
+                    padding = numpy.repeat(factorArray[-1:], len(Coors_XYZ) - len(factorArray), axis=0)
+                    factorArray = numpy.vstack([factorArray, padding])
+                elif len(factorArray) > len(Coors_XYZ):
+                    # Truncate to match coordinate length
+                    factorArray = factorArray[:len(Coors_XYZ)]
 
-                # actual 3d coords
-                Actual3DCoors = numpy.matmul(Coors_XYZ, inSpace)
+                # Apply element-wise multiplication directly
+                # This multiplies each x,y,z with its corresponding factor
+                Actual3DCoors_temp = Coors_XYZ * factorArray
+
+                # Convert back to list format if needed for downstream operations
+                Actual3DCoors = Actual3DCoors_temp.tolist()
+
+                print(Actual3DCoors)
 
                 # # single line connection
                 # orderCoors = Image_Process_Functions.ConnectSingleLine(
@@ -2209,7 +2301,7 @@ class VTK3DView(object):
                     iteration=iteration,
                     passBand=passBand,
                 )
-            elif extension == ".stl":
+            elif extension in [".stl", ".obj", ".ply", ".vtk", ".vtp", "vtu"]:
                 _, polydata = CreateSTLActor(
                     fileName=volumeFile,
                     smooth=smoothChoice,
