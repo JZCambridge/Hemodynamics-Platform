@@ -1,0 +1,15 @@
+ReorderID,CompName,Localsystem,Property,Type,Lumen
+51,Lumen,FALSE,PSHELL,Fluid_Lumen,TRUE
+101,Aor_in,TRUE,PSHELL,Fluid_inlet,FALSE
+151,Aor_outFFR,TRUE,PSHELL,Fluid_outlet,FALSE
+151,Aor_out,TRUE,PSHELL,Fluid_outlet,FALSE
+209,pRCA,TRUE,PSHELL,Fluid_outlet,FALSE
+209,mRCA,TRUE,PSHELL,Fluid_outlet,FALSE
+209,dRCA,TRUE,PSHELL,Fluid_outlet,FALSE
+302,D1,TRUE,PSHELL,Fluid_outlet,FALSE
+303,D2,TRUE,PSHELL,Fluid_outlet,FALSE
+311,pLAD,TRUE,PSHELL,Fluid_outlet,FALSE
+311,mLAD,TRUE,PSHELL,Fluid_outlet,FALSE
+311,dLAD,TRUE,PSHELL,Fluid_outlet,FALSE
+357,pCx,TRUE,PSHELL,Fluid_outlet,FALSE
+400,IMB,TRUE,PSHELL,Fluid_outlet,FALSE

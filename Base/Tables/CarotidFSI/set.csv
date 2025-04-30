@@ -1,0 +1,5 @@
+ReorderID,CompName,Localsystem,Property,Type,Lumen
+51,Lumen,FALSE,PSHELL,Fluid_Lumen,TRUE
+103,CCA,TRUE,PSHELL,Fluid_inlet,FALSE
+152,ICA,TRUE,PSHELL,Fluid_inlet,FALSE
+153,ECA,TRUE,PSHELL,Fluid_inlet,FALSE

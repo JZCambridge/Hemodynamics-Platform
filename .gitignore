@@ -1,6 +1,12 @@
 # ignore folders
 ## ignore all Base
-**/Base
+**/Base/centerline_*
+**/Base/CPP
+**/Base/git_setting
+**/Base/Pype
+**/Base/SingleCenterline_*
+**/Base/VisualizationParaviewZTest
+
 ## ignore all __pycache__
 **/__pycache__
 

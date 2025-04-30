@@ -1,0 +1,6 @@
+ReorderID,CompName,Localsystem,Property,Type,Lumen
+52,Wall_in,FALSE,PSHELL,Solid_inlumen,TRUE
+53,Wall_out,FALSE,PSHELL,Solid_outlumen,FALSE
+103,CCA,FALSE,PSHELL,Solid_inlet,FALSE
+152,ICA,FALSE,PSHELL,Solid_outlet,FALSE
+153,ECA,FALSE,PSHELL,Solid_outlet,FALSE
